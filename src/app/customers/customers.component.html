@@ -1,0 +1,26 @@
+<p>customers works!</p>
+
+<form formGroup="profileForm">
+    <div class="spacing">
+        <label for="first-name">First Name: </label> <br>
+        <input id="first-name" type="text" formControlName="firstName">
+    </div>
+    <div>
+        <label for="last-name">Last Name: </label><br>
+        <input id="last-name" type="text" formControlName="lastName">
+    </div>
+
+    <!-- <div>
+        <label for="last-name">Hobies </label><br>
+        <input id="last-name" type="text" formControlName="hobies">&nbsp;&nbsp;<button (click)="addHobbies()">add</button>&nbsp;&nbsp;<button>remove</button>
+        
+    </div> -->
+    <div formArrayName="hobies">
+        <label for="last-name">Hobies </label><br>
+        <div *ngFor="let cm of hobies.controls; index as i">
+            <input formControlName="i">&nbsp;&nbsp;<button (click)="addHobbies()">add</button>&nbsp;&nbsp;<button
+                (click)="addHobbies()">remove</button>
+        </div>
+    </div>
+
+</form>

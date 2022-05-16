@@ -1,0 +1,13 @@
+.text-center{
+    text-align: center;
+    padding: 10px;
+
+}
+.text-center button{
+    margin-right: 20px;
+    padding: 10px;
+    background: blue;
+    border-radius: 5px;
+    border: 0px;
+    color: #fff;
+}
